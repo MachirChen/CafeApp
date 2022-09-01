@@ -6,14 +6,47 @@
 //
 
 import UIKit
+import CoreLocation
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
-
+    var myLocationManager = CLLocationManager()
+    var myUserDefaults : UserDefaults!
+    let userLocationAuth : String = "locationAuth"
+    
+    func setupManager() {
+        myLocationManager = CLLocationManager()
+        myLocationManager.delegate = self
+        myLocationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
+        myLocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        myLocationManager.activityType = .automotiveNavigation
+        myLocationManager.startUpdatingHeading()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.myUserDefaults = UserDefaults.standard
+        setupManager()
+        
+        switch myLocationManager.authorizationStatus {
+        case .notDetermined:
+            myLocationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            self.myUserDefaults.set(false, forKey: userLocationAuth)
+            self.myUserDefaults.synchronize()
+        case .denied:
+            self.myUserDefaults.set(false, forKey: userLocationAuth)
+            self.myUserDefaults.synchronize()
+        case .authorizedWhenInUse:
+            self.myUserDefaults.set(false, forKey: userLocationAuth)
+            self.myUserDefaults.synchronize()
+        default:
+            break
+        }
+        
+        //myLocationManager.requestWhenInUseAuthorization()
         return true
     }
 

@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		2552E34528A287F60097B8EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E34428A287F60097B8EA /* AppDelegate.swift */; };
 		2552E34728A287F60097B8EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E34628A287F60097B8EA /* SceneDelegate.swift */; };
-		2552E34928A287F60097B8EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E34828A287F60097B8EA /* ViewController.swift */; };
 		2552E34C28A287F60097B8EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2552E34A28A287F60097B8EA /* Main.storyboard */; };
 		2552E34E28A287F80097B8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2552E34D28A287F80097B8EA /* Assets.xcassets */; };
 		2552E35128A287F80097B8EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2552E34F28A287F80097B8EA /* LaunchScreen.storyboard */; };
+		2552E35A28A2894F0097B8EA /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E35928A2894F0097B8EA /* Cafe.swift */; };
+		2552E35D28A290150097B8EA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E35C28A290150097B8EA /* MapViewController.swift */; };
+		2552E35F28A2B3060097B8EA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E35E28A2B3060097B8EA /* MenuController.swift */; };
+		25AD7F5028AD0BA000441039 /* CafeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD7F4F28AD0BA000441039 /* CafeListTableViewController.swift */; };
+		25EBCEF428AD179800734B12 /* CafeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBCEF328AD179800734B12 /* CafeListTableViewCell.swift */; };
+		25EBCEF628AD2FBF00734B12 /* CafeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBCEF528AD2FBF00734B12 /* CafeAPI.swift */; };
+		25EBCEF828AE77B500734B12 /* CafeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBCEF728AE77B500734B12 /* CafeDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2552E34128A287F60097B8EA /* CafeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2552E34428A287F60097B8EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2552E34628A287F60097B8EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2552E34828A287F60097B8EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2552E34B28A287F60097B8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2552E34D28A287F80097B8EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2552E35028A287F80097B8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2552E35228A287F80097B8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2552E35928A2894F0097B8EA /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		2552E35C28A290150097B8EA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2552E35E28A2B3060097B8EA /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		25AD7F4F28AD0BA000441039 /* CafeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListTableViewController.swift; sourceTree = "<group>"; };
+		25EBCEF328AD179800734B12 /* CafeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListTableViewCell.swift; sourceTree = "<group>"; };
+		25EBCEF528AD2FBF00734B12 /* CafeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeAPI.swift; sourceTree = "<group>"; };
+		25EBCEF728AE77B500734B12 /* CafeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,37 @@
 		2552E34328A287F60097B8EA /* CafeApp */ = {
 			isa = PBXGroup;
 			children = (
+				2552E35B28A28FF90097B8EA /* Controller */,
+				2552E35828A288E00097B8EA /* Model */,
 				2552E34428A287F60097B8EA /* AppDelegate.swift */,
 				2552E34628A287F60097B8EA /* SceneDelegate.swift */,
-				2552E34828A287F60097B8EA /* ViewController.swift */,
 				2552E34A28A287F60097B8EA /* Main.storyboard */,
 				2552E34D28A287F80097B8EA /* Assets.xcassets */,
 				2552E34F28A287F80097B8EA /* LaunchScreen.storyboard */,
 				2552E35228A287F80097B8EA /* Info.plist */,
 			);
 			path = CafeApp;
+			sourceTree = "<group>";
+		};
+		2552E35828A288E00097B8EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2552E35928A2894F0097B8EA /* Cafe.swift */,
+				2552E35E28A2B3060097B8EA /* MenuController.swift */,
+				25EBCEF528AD2FBF00734B12 /* CafeAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2552E35B28A28FF90097B8EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2552E35C28A290150097B8EA /* MapViewController.swift */,
+				25AD7F4F28AD0BA000441039 /* CafeListTableViewController.swift */,
+				25EBCEF328AD179800734B12 /* CafeListTableViewCell.swift */,
+				25EBCEF728AE77B500734B12 /* CafeDetailTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +172,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2552E34928A287F60097B8EA /* ViewController.swift in Sources */,
+				25EBCEF828AE77B500734B12 /* CafeDetailTableViewController.swift in Sources */,
+				25EBCEF428AD179800734B12 /* CafeListTableViewCell.swift in Sources */,
+				25EBCEF628AD2FBF00734B12 /* CafeAPI.swift in Sources */,
+				25AD7F5028AD0BA000441039 /* CafeListTableViewController.swift in Sources */,
+				2552E35F28A2B3060097B8EA /* MenuController.swift in Sources */,
+				2552E35A28A2894F0097B8EA /* Cafe.swift in Sources */,
 				2552E34528A287F60097B8EA /* AppDelegate.swift in Sources */,
+				2552E35D28A290150097B8EA /* MapViewController.swift in Sources */,
 				2552E34728A287F60097B8EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -290,17 +330,19 @@
 				DEVELOPMENT_TEAM = H2DCS9FT8R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CafeApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "以便尋找您附近的咖啡館";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = machir.CafeApp;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = machir.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,17 +360,19 @@
 				DEVELOPMENT_TEAM = H2DCS9FT8R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CafeApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "以便尋找您附近的咖啡館";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = machir.CafeApp;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = machir.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
