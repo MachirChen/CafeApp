@@ -1,15 +1,16 @@
 //
-//  CafeListTableViewCell.swift
+//  CityCafeListTableViewCell.swift
 //  CafeApp
 //
-//  Created by Machir on 2022/8/17.
+//  Created by Machir on 2022/11/26.
 //
 
 import UIKit
 
-class CafeListTableViewCell: UITableViewCell {
+class CityCafeListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cafeNameLabel: UILabel!
+    @IBOutlet weak var cafeAddressLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

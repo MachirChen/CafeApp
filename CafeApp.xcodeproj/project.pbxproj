@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253640C02906B40100962C48 /* MyPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253640BF2906B40100962C48 /* MyPointAnnotation.swift */; };
 		2552E34528A287F60097B8EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E34428A287F60097B8EA /* AppDelegate.swift */; };
 		2552E34728A287F60097B8EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E34628A287F60097B8EA /* SceneDelegate.swift */; };
 		2552E34C28A287F60097B8EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2552E34A28A287F60097B8EA /* Main.storyboard */; };
@@ -15,13 +16,20 @@
 		2552E35A28A2894F0097B8EA /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E35928A2894F0097B8EA /* Cafe.swift */; };
 		2552E35D28A290150097B8EA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E35C28A290150097B8EA /* MapViewController.swift */; };
 		2552E35F28A2B3060097B8EA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552E35E28A2B3060097B8EA /* MenuController.swift */; };
-		25AD7F5028AD0BA000441039 /* CafeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD7F4F28AD0BA000441039 /* CafeListTableViewController.swift */; };
-		25EBCEF428AD179800734B12 /* CafeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBCEF328AD179800734B12 /* CafeListTableViewCell.swift */; };
+		2578CB0628E33921006DA46D /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2578CB0528E33921006DA46D /* MapTableViewCell.swift */; };
+		25C04B452950972B0024FB37 /* MapCafeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C04B442950972B0024FB37 /* MapCafeDetailTableViewController.swift */; };
 		25EBCEF628AD2FBF00734B12 /* CafeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBCEF528AD2FBF00734B12 /* CafeAPI.swift */; };
 		25EBCEF828AE77B500734B12 /* CafeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBCEF728AE77B500734B12 /* CafeDetailTableViewController.swift */; };
+		25FF952F292FAD52003BC9FE /* CityMenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF952E292FAD52003BC9FE /* CityMenuCollectionViewController.swift */; };
+		25FF9531292FB12E003BC9FE /* CityMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF9530292FB12E003BC9FE /* CityMenuCollectionViewCell.swift */; };
+		25FF9533292FC92E003BC9FE /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF9532292FC92E003BC9FE /* City.swift */; };
+		25FF9535293131A1003BC9FE /* CityCafeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF9534293131A1003BC9FE /* CityCafeListTableViewController.swift */; };
+		25FF9537293131C9003BC9FE /* CityCafeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF9536293131C9003BC9FE /* CityCafeListTableViewCell.swift */; };
+		25FF953B2934EBA1003BC9FE /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 25FF953A2934EBA1003BC9FE /* FacebookLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		253640BF2906B40100962C48 /* MyPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPointAnnotation.swift; sourceTree = "<group>"; };
 		2552E34128A287F60097B8EA /* CafeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2552E34428A287F60097B8EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2552E34628A287F60097B8EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,10 +40,16 @@
 		2552E35928A2894F0097B8EA /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		2552E35C28A290150097B8EA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2552E35E28A2B3060097B8EA /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		25AD7F4F28AD0BA000441039 /* CafeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListTableViewController.swift; sourceTree = "<group>"; };
-		25EBCEF328AD179800734B12 /* CafeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListTableViewCell.swift; sourceTree = "<group>"; };
+		2578CB0528E33921006DA46D /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		25C04B442950972B0024FB37 /* MapCafeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCafeDetailTableViewController.swift; sourceTree = "<group>"; };
 		25EBCEF528AD2FBF00734B12 /* CafeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeAPI.swift; sourceTree = "<group>"; };
 		25EBCEF728AE77B500734B12 /* CafeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailTableViewController.swift; sourceTree = "<group>"; };
+		25FF952E292FAD52003BC9FE /* CityMenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMenuCollectionViewController.swift; sourceTree = "<group>"; };
+		25FF9530292FB12E003BC9FE /* CityMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		25FF9532292FC92E003BC9FE /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		25FF9534293131A1003BC9FE /* CityCafeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCafeListTableViewController.swift; sourceTree = "<group>"; };
+		25FF9536293131C9003BC9FE /* CityCafeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCafeListTableViewCell.swift; sourceTree = "<group>"; };
+		25FF95382934E9D0003BC9FE /* CafeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CafeApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FF953B2934EBA1003BC9FE /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +83,7 @@
 		2552E34328A287F60097B8EA /* CafeApp */ = {
 			isa = PBXGroup;
 			children = (
+				25FF95382934E9D0003BC9FE /* CafeApp.entitlements */,
 				2552E35B28A28FF90097B8EA /* Controller */,
 				2552E35828A288E00097B8EA /* Model */,
 				2552E34428A287F60097B8EA /* AppDelegate.swift */,
@@ -86,6 +102,8 @@
 				2552E35928A2894F0097B8EA /* Cafe.swift */,
 				2552E35E28A2B3060097B8EA /* MenuController.swift */,
 				25EBCEF528AD2FBF00734B12 /* CafeAPI.swift */,
+				253640BF2906B40100962C48 /* MyPointAnnotation.swift */,
+				25FF9532292FC92E003BC9FE /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,9 +112,13 @@
 			isa = PBXGroup;
 			children = (
 				2552E35C28A290150097B8EA /* MapViewController.swift */,
-				25AD7F4F28AD0BA000441039 /* CafeListTableViewController.swift */,
-				25EBCEF328AD179800734B12 /* CafeListTableViewCell.swift */,
 				25EBCEF728AE77B500734B12 /* CafeDetailTableViewController.swift */,
+				2578CB0528E33921006DA46D /* MapTableViewCell.swift */,
+				25FF952E292FAD52003BC9FE /* CityMenuCollectionViewController.swift */,
+				25FF9530292FB12E003BC9FE /* CityMenuCollectionViewCell.swift */,
+				25FF9534293131A1003BC9FE /* CityCafeListTableViewController.swift */,
+				25FF9536293131C9003BC9FE /* CityCafeListTableViewCell.swift */,
+				25C04B442950972B0024FB37 /* MapCafeDetailTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +139,9 @@
 			dependencies = (
 			);
 			name = CafeApp;
+			packageProductDependencies = (
+				25FF953A2934EBA1003BC9FE /* FacebookLogin */,
+			);
 			productName = CafeApp;
 			productReference = 2552E34128A287F60097B8EA /* CafeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 2552E33828A287F60097B8EA;
+			packageReferences = (
+				25FF95392934EBA1003BC9FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 2552E34228A287F60097B8EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,12 +201,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				25EBCEF828AE77B500734B12 /* CafeDetailTableViewController.swift in Sources */,
-				25EBCEF428AD179800734B12 /* CafeListTableViewCell.swift in Sources */,
+				25FF952F292FAD52003BC9FE /* CityMenuCollectionViewController.swift in Sources */,
 				25EBCEF628AD2FBF00734B12 /* CafeAPI.swift in Sources */,
-				25AD7F5028AD0BA000441039 /* CafeListTableViewController.swift in Sources */,
+				25FF9537293131C9003BC9FE /* CityCafeListTableViewCell.swift in Sources */,
+				25FF9531292FB12E003BC9FE /* CityMenuCollectionViewCell.swift in Sources */,
 				2552E35F28A2B3060097B8EA /* MenuController.swift in Sources */,
 				2552E35A28A2894F0097B8EA /* Cafe.swift in Sources */,
+				25C04B452950972B0024FB37 /* MapCafeDetailTableViewController.swift in Sources */,
+				2578CB0628E33921006DA46D /* MapTableViewCell.swift in Sources */,
 				2552E34528A287F60097B8EA /* AppDelegate.swift in Sources */,
+				25FF9535293131A1003BC9FE /* CityCafeListTableViewController.swift in Sources */,
+				25FF9533292FC92E003BC9FE /* City.swift in Sources */,
+				253640C02906B40100962C48 /* MyPointAnnotation.swift in Sources */,
 				2552E35D28A290150097B8EA /* MapViewController.swift in Sources */,
 				2552E34728A287F60097B8EA /* SceneDelegate.swift in Sources */,
 			);
@@ -325,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CafeApp/CafeApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H2DCS9FT8R;
@@ -341,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = machir.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -355,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CafeApp/CafeApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H2DCS9FT8R;
@@ -371,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = machir.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -402,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25FF95392934EBA1003BC9FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25FF953A2934EBA1003BC9FE /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25FF95392934EBA1003BC9FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2552E33928A287F60097B8EA /* Project object */;
 }

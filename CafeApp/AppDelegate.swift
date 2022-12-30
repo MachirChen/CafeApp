@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import FacebookCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
@@ -46,8 +47,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             break
         }
         
+        //FB相關設定
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         //myLocationManager.requestWhenInUseAuthorization()
         return true
+    }
+    
+    //切換到FB App後，再從FB App切換回我們的App時呼叫此func
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        //ApplicationDelegate.shared.application(app, open: url, options: options)
+        ApplicationDelegate.shared.application(app, open: url, sourceApplication: [UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
 
     // MARK: UISceneSession Lifecycle

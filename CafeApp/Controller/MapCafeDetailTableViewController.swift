@@ -1,13 +1,13 @@
 //
-//  CafeDetailTableViewController.swift
+//  MapCafeDetailTableViewController.swift
 //  CafeApp
 //
-//  Created by Machir on 2022/8/18.
+//  Created by Machir on 2022/12/19.
 //
 
 import UIKit
 
-class CafeDetailTableViewController: UITableViewController {
+class MapCafeDetailTableViewController: UITableViewController {
     
     var cafeData: Cafe!
     
@@ -25,7 +25,7 @@ class CafeDetailTableViewController: UITableViewController {
     @IBOutlet weak var standingDeskLabel: UILabel!
     @IBOutlet weak var officialWebsiteTextView: UITextView!
     @IBOutlet weak var openTimeTextView: UITextView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changeDisplay()
@@ -59,7 +59,7 @@ class CafeDetailTableViewController: UITableViewController {
         } else {
             officialWebsiteTextView.text = cafeData.url
         }
-
+        
         
         switch cafeData.wifi {
         case 0:
@@ -194,5 +194,4 @@ class CafeDetailTableViewController: UITableViewController {
             standingDeskLabel.text = "-"
         }
     }
-
 }

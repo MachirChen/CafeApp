@@ -1,42 +1,48 @@
 //
-//  CafeListTableViewController.swift
+//  CityCafeListTableViewController.swift
 //  CafeApp
 //
-//  Created by Machir on 2022/8/17.
+//  Created by Machir on 2022/11/26.
 //
 
 import UIKit
 
-class CafeListTableViewController: UITableViewController, UISearchBarDelegate {
+class CityCafeListTableViewController: UITableViewController {
     
+    var cityCafeListData: City!
     var cafe = [Cafe]()
-    let urlStr = "https://cafenomad.tw/api/v1.2/cafes"
-    var filteredItems: [Cafe] = []
+    var searching = false
+    var searchedCafe = [Cafe]()
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var myActivity: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MenuController.shared.fetchData(urlStr: urlStr) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let cafe):
-                    print("成功---")
-                    self.cafe = cafe
-                    self.filteredItems = self.cafe
-                    self.tableView.reloadData()
-                case .failure(let error):
-                    print("失敗---\(error)")
-                }
-            }
-        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        myActivity.startAnimating()
+        MenuController.shared.fetchData(urlStr: self.cityCafeListData.api) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let cafe):
+                    self.cafe = cafe
+                    self.tableView.reloadData()
+                    self.myActivity.stopAnimating()
+                    self.myActivity.hidesWhenStopped = true
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        self.navigationItem.title = cityCafeListData.name
+        searchBar.delegate = self
     }
-    
-    
+
 
     // MARK: - Table view data source
 
@@ -48,35 +54,28 @@ class CafeListTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return filteredItems.count
+        if searching {
+            return searchedCafe.count
+        } else {
+            return cafe.count
+        }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(CafeListTableViewCell.self)", for: indexPath) as! CafeListTableViewCell
-
-        let item = filteredItems[indexPath.row]
-        cell.cafeNameLabel.text = item.name
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(CityCafeListTableViewCell.self)", for: indexPath) as! CityCafeListTableViewCell
+        if searching {
+            let item = searchedCafe[indexPath.row]
+            cell.cafeNameLabel.text = item.name
+            cell.cafeAddressLabel.text = item.address
+        } else {
+            let item = cafe[indexPath.row]
+            cell.cafeNameLabel.text = item.name
+            cell.cafeAddressLabel.text = item.address
+        }
         return cell
     }
     
-    func search(_ searchTerm: String) {
-        if searchTerm.isEmpty {
-            filteredItems = cafe
-        } else {
-            filteredItems = cafe.filter({
-                $0.name.contains(searchTerm)
-            })
-        }
-        tableView.reloadData()
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let searchTerm = searchBar.text ?? ""
-        self.search(searchTerm)
-        searchBar.resignFirstResponder()
-    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -118,16 +117,33 @@ class CafeListTableViewController: UITableViewController, UISearchBarDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
         let controller = segue.destination as? CafeDetailTableViewController
         let cell = sender as! UITableViewCell
         if let row = tableView.indexPath(for: cell)?.row {
-            controller?.cafeData = filteredItems[row]
-            print(filteredItems[row].name)
+            if searching {
+                controller?.cafeData = searchedCafe[row]
+            } else {
+                controller?.cafeData = cafe[row]
+            }
         }
-        
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     
 
+}
+
+extension CityCafeListTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchedCafe = cafe.filter({ $0.name.lowercased().prefix(searchText.count) == searchText.lowercased()
+        })
+        searching = true
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        tableView.reloadData()
+    }
 }

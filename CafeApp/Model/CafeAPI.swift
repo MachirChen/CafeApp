@@ -46,3 +46,8 @@ enum CityCafe: String, CaseIterable {
     case penghuAPI = "https://cafenomad.tw/api/v1.2/cafes/penghu"
     case lienchiangAPI = "https://cafenomad.tw/api/v1.2/cafes/lienchiang"
 }
+
+enum testCity {
+    case taipei
+}
+
